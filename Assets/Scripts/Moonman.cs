@@ -342,9 +342,9 @@ public class Moonman : MonoBehaviour
         StartCoroutine(Counter());
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "EndWorld")
+    private void OnTriggerEnter2D(Collider2D collision)
+    { 
+        if (collision.gameObject.tag == "EndWorld")
         {
             Destroy(this.gameObject);
         }
