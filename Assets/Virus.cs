@@ -7,7 +7,8 @@ public class Virus : MonoBehaviour
     private bool isBeingHeld = true;
 
     [SerializeField] private GameObject virusParticles;
-    [SerializeField] private GameObject virusSprite;
+    [SerializeField] private GameObject virus
+        ;
     [SerializeField] private Collider2D virusCollider;
 
     void Awake() { isBeingHeld = true; }
