@@ -44,6 +44,8 @@ public class WorldManager : MonoBehaviour
     private GameObject yetiPrefab;
     [SerializeField]
     private GameObject moonmenPrefab;
+    [SerializeField]
+    private GameObject virusPrefab;
 
     private GameObject playerSelectedPower;
     private float holdingLerpSpeed = 10f;
@@ -191,7 +193,7 @@ public class WorldManager : MonoBehaviour
                 tempVec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
             playerSelectedPower.transform.position =
-                    Vector3.Lerp(playerSelectedPower.transform.position, new Vector3(tempVec.x, tempVec.y, -8), Time.deltaTime*holdingLerpSpeed);
+                    Vector3.Lerp(playerSelectedPower.transform.position, new Vector3(tempVec.x, tempVec.y, 0), Time.deltaTime*holdingLerpSpeed);
         }
     }
 
@@ -206,6 +208,7 @@ public class WorldManager : MonoBehaviour
 
     public void ChoseThunder() { Spawn(thunderPrefab); }
     public void ChoseYeti() { Spawn(yetiPrefab); }
+    public void ChoseVirus() { Spawn(virusPrefab); }
     public void ChoseMMBox() { Spawn(moonmenPrefab); }
 
     public void StopHolding() { playerSelectedPower = null; }

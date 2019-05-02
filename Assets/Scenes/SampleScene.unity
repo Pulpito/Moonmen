@@ -1286,7 +1286,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 900771792}
-        m_MethodName: ChoseYeti
+        m_MethodName: ChoseVirus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4121,6 +4121,8 @@ MonoBehaviour:
   yetiPrefab: {fileID: 2304897184432315831, guid: 98ccd2c9337bbc742a96bf85b9a018e3,
     type: 3}
   moonmenPrefab: {fileID: 5901311479145008237, guid: 0b19ab1cabd930746a1b6985cac70d10,
+    type: 3}
+  virusPrefab: {fileID: 1304350159989318767, guid: c0f9cd531a4493445a1fb8ff5c6761f8,
     type: 3}
   humiditySlider: {fileID: 1443952460}
   temperatureSlider: {fileID: 1028963185}
@@ -11250,7 +11252,7 @@ RectTransform:
   m_GameObject: {fileID: 1536527570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.49411, y: 0.49411, z: 0.49411}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 1193997373}
   - {fileID: 600077512}
@@ -11259,11 +11261,11 @@ RectTransform:
   m_Father: {fileID: 605185854}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -885, y: -197.8}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -20, y: 20}
   m_SizeDelta: {x: 293, y: 1360}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &1536527572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12431,7 +12433,7 @@ RectTransform:
   m_GameObject: {fileID: 1767643452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.375172, y: 2.375172, z: 2.375172}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1610877562}
   - {fileID: 340586282}
@@ -12637,16 +12639,16 @@ RectTransform:
   m_GameObject: {fileID: 1793896081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4388, y: 0.4388, z: 0.4388}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.4}
   m_Children: []
   m_Father: {fileID: 605185854}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 881, y: 454}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -25, y: -20}
   m_SizeDelta: {x: 306, y: 306}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1793896083
 MonoBehaviour:
   m_ObjectHideFlags: 0

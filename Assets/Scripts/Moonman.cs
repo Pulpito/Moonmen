@@ -17,10 +17,13 @@ public class Moonman : MonoBehaviour
     public AudioClip[] FearCrys;
     public AudioClip Pop;
     private bool canCry = true;
+    private Color sickColor;
+    private SpriteRenderer bodySprite;
 
     public bool isFired;
     public bool isIced;
     public bool isDrowned;
+    public bool isSick = false;
     public float isGravited = 1;
     private float randGir;
 
@@ -67,6 +70,8 @@ public class Moonman : MonoBehaviour
             this.transform.localScale = new Vector3(scale, scale, 1);
 
         StartCoroutine(Counter());
+
+        bodySprite = this.GetComponent<SpriteRenderer>();
     }
 
     private IEnumerator Cry()
@@ -83,6 +88,8 @@ public class Moonman : MonoBehaviour
             panic = true;
         else
             panic = false;
+
+        if(isSick) this.gameObject.transform.GetChild(4).gameObject.SetActive(true);
 
         if (panic && !isFired && !isDrowned && !isIced)
         {
@@ -227,7 +234,10 @@ public class Moonman : MonoBehaviour
             else
             {
                 for (int i = 0; i < this.gameObject.transform.childCount; i++)
+                {
+                    if (i == 4) continue;
                     this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
+                }
                 this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
 
                 Vector3 moveVector2 = (Vector3.right * x + Vector3.up * y);
@@ -302,6 +312,13 @@ public class Moonman : MonoBehaviour
             Instantiate(Blood[Random.Range(0, Blood.Length - 1)], this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
+    }
+
+    public void GetSick() {
+        if (isSick) return;
+        sickColor = Random.ColorHSV();
+        bodySprite.color = sickColor;
+        isSick = true;
     }
 
     private IEnumerator DieFired()

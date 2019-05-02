@@ -741,9 +741,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5a4ba2983c3abe94bb37c3d9b2822b14, type: 3}
   - {fileID: 8300000, guid: 1b916edf733a6164180264269329286f, type: 3}
   Pop: {fileID: 8300000, guid: fa5c0783ee98e2a44877c871c621ee5a, type: 3}
+  ThirdEye: {fileID: 2251886956933154417}
   isFired: 0
   isIced: 0
   isDrowned: 0
+  isSick: 0
+  isGravited: 1
+  Yclimbed: 0
   Blood:
   - {fileID: 8808096779444807426, guid: 693b5c24b0924f344a858693f7f1ec78, type: 3}
   - {fileID: 1712758709626064919, guid: 0431a8d34dfa60d4387fd84bd59adb50, type: 3}
