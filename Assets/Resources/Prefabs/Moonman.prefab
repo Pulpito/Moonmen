@@ -741,7 +741,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5a4ba2983c3abe94bb37c3d9b2822b14, type: 3}
   - {fileID: 8300000, guid: 1b916edf733a6164180264269329286f, type: 3}
   Pop: {fileID: 8300000, guid: fa5c0783ee98e2a44877c871c621ee5a, type: 3}
-  ThirdEye: {fileID: 2251886956933154417}
+  chancesOfReproducing: 1000
   isFired: 0
   isIced: 0
   isDrowned: 0

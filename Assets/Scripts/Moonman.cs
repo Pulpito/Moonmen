@@ -19,6 +19,8 @@ public class Moonman : MonoBehaviour
     private bool canCry = true;
     private Color sickColor;
     private SpriteRenderer bodySprite;
+    private float lastTimeWeReproduced = -1;
+    [SerializeField] private int chancesOfReproducing = 400;
 
     public bool isFired;
     public bool isIced;
@@ -72,6 +74,8 @@ public class Moonman : MonoBehaviour
         StartCoroutine(Counter());
 
         bodySprite = this.GetComponent<SpriteRenderer>();
+        sickColor = bodySprite.color;
+        isSick = false;
     }
 
     private IEnumerator Cry()
@@ -314,7 +318,8 @@ public class Moonman : MonoBehaviour
         }
     }
 
-    public void GetSick() {
+    public void GetSick()
+    {
         if (isSick) return;
         sickColor = Random.ColorHSV();
         bodySprite.color = sickColor;
@@ -398,6 +403,17 @@ public class Moonman : MonoBehaviour
                 this.transform.localScale = new Vector3(scale, scale, 1);
 
             TimeNextMov = 0;
-        }     
+        }
+        if(collision.gameObject.tag == "Moonman")
+        {
+            // Tries to reproduce.
+            if (Random.Range(0, chancesOfReproducing) < 1 && (lastTimeWeReproduced - Time.time >= 5 || lastTimeWeReproduced == -1))
+            {
+                GameObject h = Instantiate(Resources.Load<GameObject>("Prefabs/Hearts_Animation"));
+                h.transform.position = transform.position;
+                h.GetComponent<MakeNewMoonman>().MoonmanInfo(isSick, bodySprite.color);
+                lastTimeWeReproduced = Time.time;
+            }
+        }
     }
 }
